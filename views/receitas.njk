@@ -1,0 +1,35 @@
+
+{% extends 'layout.njk' %}
+{% block content %}
+    <main>
+     <section class="receitas">
+                {%for comida in cook%}
+                <div class="receita">
+                    <img src="{{comida.image}}" alt="imagem de {{comida.title}}">
+                    <h3>{{comida.title}}</h3>
+                    <p>por {{comida.owner}}</p>
+                </div>
+              {%endfor%}
+                              {%for comida in cook%}
+                <div class="receita">
+                    <img src="{{comida.image}}" alt="imagem de {{comida.title}}">
+                    <h3>{{comida.title}}</h3>
+                    <p>por {{comida.owner}}</p>
+                </div>
+              {%endfor%}
+            </section>
+    
+    </main>
+      <footer>
+
+            <div class="footer">
+                Todos os direitos reservados, receitas Foodfy
+            </div>
+        </footer>
+        <script src="scripts.js"></script>
+</body>
+</html>  
+  
+  {%endblock%}
+  
+ 

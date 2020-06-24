@@ -1,0 +1,47 @@
+
+{% extends 'layout.njk' %}
+{% block content %}
+        <main>
+            <div class='img_destaq'>
+                <div class="img_destaq_text">
+                    <h1>As melhores receitas</h1>
+                    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</p>
+                </div>
+                <img src="./assets/chef.png" alt="Imagen do chefe">
+            </div>
+            <h1>Mais acessadas</h1>
+            <section class="receitas">
+                {%for comida in cook%}
+                <div class="receita">
+                    <img src="{{comida.image}}" alt="imagem de {{comida.title}}">
+                    <h3>{{comida.title}}</h3>
+                    <p>por {{comida.owner}}</p>
+                </div>
+              {%endfor%}
+            </section>
+            <div class="modal-overlay">
+                <div class="modal">
+                <i class="material-icons">close</i>
+                <img src="" alt="">
+                <div class="texto">
+                <h1></h1>
+                <p></p>
+                
+                </div>
+                
+                
+                </div>
+            </div>
+
+        </main>
+        <div class="space"></div>
+        <footer>
+
+            <div class="footer">
+                Todos os direitos reservados, receitas Foodfy
+            </div>
+        </footer>
+        <script src="./scripts.js"></script>
+    </body>
+</html>
+{% endblock content %}
